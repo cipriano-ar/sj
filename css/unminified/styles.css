@@ -1,0 +1,410 @@
+/*
+* Stylesheet for a Food truck website
+* @author Cipriano Mazzieri
+*/
+
+/*
+*	green (menu)	#65D800	(101,216,0)	
+*	green (logo)	#7AA500 	(122,165,0)
+*	red:				#D00000 	(208,0,0)
+*	yellow:			#D9D004 	(217,208,4)
+*	black:			#020202	(2,2,2)
+*	white:			#FDFDFD	(253,253,253)
+*/
+
+/*---------------- HEADER ----------------*/
+
+header {
+	text-align: center;
+	background: rgba(34,34,34,0.95);
+}
+
+/* SECONDARY NAV BAR */
+
+.sec-nav-bar {
+	background: rgba(34,34,34,0.95);
+	margin-top: 0em;
+	width: 100%;
+	position: fixed;
+	top: 0em;
+	left: 0em;
+	z-index: 999;
+	display: none;
+}
+
+.sec-nav-bar .img-container {
+	max-width: 100px;
+	margin: 0em auto;
+	display: inline-block;
+}
+
+.sec-nav-bar > a {
+	color:#FFFFFF;
+	padding-left: 1em;
+}
+.sec-nav-bar > a:hover {
+	color: #65D800;
+}
+
+.sec-nav-bar > a .sml-cont {
+	font-size: 0.7em;
+	width: 40px;
+	vertical-align: middle;
+	padding-right: 1em;
+	display: inline-block;
+}
+
+/* LOGO */
+.logo .img-container {
+	max-width: 130px;
+	margin:1em auto;
+}
+
+/* NAV BAR */
+
+#hamburger {
+	background: rgba(255,255,0,0.3);
+	cursor: pointer;
+	padding: 3px 4px;
+	border-radius: 2px;
+	margin: 0em auto 1.5em;
+	height: 2.5em;
+	width: 2.5em;
+}
+
+#hamburger div {
+	background: #65D800;
+	border:1px solid #00FF00;
+	border-radius: 2px;
+	margin: 4px auto 5px;
+	height: 4px;
+	width: 90%;
+}
+
+.menu {
+	list-style-type:none;
+	padding:0;
+	margin:1em auto 2.5em;
+}
+#menu .scroll:focus {
+	color:#FDFDFD;
+}
+
+nav li a {
+	display:block;
+	color:#65D800;
+	font-size: 1.2em;
+	text-align: center;
+	background: rgba(58,58,58,0.4);
+	line-height: 50px;
+	height: 50px;	
+}
+
+nav li:nth-of-type(odd) a {
+	background: rgba(90,90,90,0.4);
+}
+
+nav li a:hover {
+	color: #fff;
+}
+
+/* SOCIAL BAR */
+
+.social a:focus {
+	color: #FDFDFD;
+}
+.social p {
+	margin-top: 2em;
+}
+
+header p a,
+header p a:active {	
+	color:#FFFFFF;
+}
+
+header p a:hover {
+	color: #65D800;
+}
+
+/* font awesome icon */
+header i {
+  	padding: 0.5em 0.5em;
+}
+
+
+/*---------------- MAIN ----------------*/
+
+:target:not(#top) {
+	padding-top: 2em;
+}
+
+.data-row {
+	background: rgba(58,58,58,0.7);
+	padding: 0.5em;
+	margin-bottom: 1em;
+}
+
+.data-row:nth-of-type(even) {
+	background: rgba(90,90,90,0.7);
+}
+
+.description-s {
+	font-style: italic;
+}
+
+.menu-item {
+	color:#65D800;
+}
+
+.food-menu .description-s {
+	font-size: 1.2em;
+	background: black;
+	width: 5em;
+	display: inline-block;
+	padding:1em;
+	border-radius: 1em;
+	margin:0;
+}
+
+.about-us .data-row,
+.contact-us .data-row {
+	color: #FDFDFD; /*959595;*/
+	font-size: 1.3em;
+	padding: 2em 0.8em;
+}
+
+.about-us p,
+.contact-us p {
+	margin: 1.3em 0;
+}
+.contact-us .data-row {
+	letter-spacing: 2px;
+}
+
+.contact-us .fa {
+	color: #65D800;
+}
+
+/*---------------- FOOTER ----------------*/
+
+.sj-footer {
+	font-size: 1.3em;
+	letter-spacing: 0.2em;
+}
+
+.sj {
+	color:#f50000;
+}
+
+footer {
+	margin: 3em 0;
+}
+
+footer i {
+	color:#f50000;
+}
+
+footer strong {
+	font-weight: 400;
+	letter-spacing: 0.2em;
+}
+
+footer .description-s {
+	line-height: 2em
+}
+
+footer .img-container {
+	width: 64px;
+	height: 54px;
+	border-radius: 0.7em;
+}
+
+footer .stroke-yellow {
+	text-shadow: -1px -1px #ffcc22,
+					 -1px 1px #ffcc22,
+					  1px -1px #ffcc22,
+					  1px 1px #ffcc22;
+}
+
+/*---------------- GENERAL CLASSESS ----------------*/
+
+.container {
+	color:#fff;
+	font-size: 1.5em;
+   max-width: 960px;
+   background: #222;
+}
+
+.stroke-yellow {
+	text-shadow: -1px -1px #ffcc22,
+					 -1px 1px #ffcc22,
+					  1px -1px #ffcc22,
+					  1px 1px #ffcc22;
+}
+
+.road-texture {
+   background: url(../media/images/bgds/road-texture.jpg);
+}
+
+.hot-coal-texture {
+   background: url(../media/images/bgds/hot-coal-texture.jpg);
+}
+
+.oven-draws-texture {
+	background: url(../media/images/bgds/oven-draws-texture.jpg);
+}
+
+.gone {
+	display: none;
+}
+
+.eye-hidden {
+	opacity: 0;
+}
+
+.text-red { color:#f50000; }
+.text-green { color:#65D800; }
+.text-yellow { color:#ffcc22; }
+
+
+/*---------------- GENERAL ELEMENTS ----------------*/
+
+body {
+  font-size: 10px;
+  background: linear-gradient(to right, #111, #ccc, #111);
+}
+
+h2 {
+	color:#f50000;
+	font-size: 2.9em;
+	text-transform: uppercase;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	/*margin-bottom: 3em;*/
+}
+
+h3 {
+	color:#65D800;	
+	font-size: 2em;
+	text-transform:capitalize;
+}
+
+h4 {
+	color:#ffcc22;
+	font-weight: 200;
+}
+
+a, a:hover, a:active, a:focus {
+	text-decoration:none;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+	margin-top: 2em;
+}
+
+
+/*------------------------------------------------------------
+------------------------------------------------------------*/
+/*                    MEDIA QUERIES
+/*------------------------------------------------------------
+------------------------------------------------------------*/
+
+
+/*---------------- from 768px ----------------*/
+
+@media screen and (min-width: 768px) {
+
+	h2 {
+		font-size: 6.4em;
+	}
+
+
+	/*------------------------------------------------------------
+									HEADER
+	------------------------------------------------------------*/
+
+	nav {
+		margin-top: 2em;
+	}
+
+  	nav li {
+		min-width: 95px;
+		margin-right: 0.2em;
+	}
+
+	nav li:last-child {
+		margin-right: 0em;
+	}
+
+	nav li a {
+		background: rgba(90,90,90,0.4);
+		padding:0 0.3em;
+		border-radius: 0.3em;
+	}
+
+	/*nav li:nth-of-type(odd) a {
+		background: none;
+	}*/
+
+	nav li a:hover {
+		background: rgba(90,90,90,0.6);	
+	}
+
+	
+	/*------------------------------------------------------------
+									MAIN
+	------------------------------------------------------------*/
+
+	:target:not(#top) {
+		padding-top: 7.4em;
+	}
+
+	/*------------------------------------------------------------
+									FOOD MENU
+	------------------------------------------------------------*/
+
+	.data-row {
+		position: relative;
+	}
+
+	.food-menu h3,
+	.food-menu .description-l {
+		text-align: left;
+		max-width: 80%;
+	}
+
+	.food-menu .description-s {
+		position: absolute;
+		top:25%;
+		right: 6%;
+	}
+
+	/*------------------------------------------------------------
+									ABOUT US
+	------------------------------------------------------------*/
+
+	.about-us .data-row {
+	font-size: 1.5em;
+	text-align: left;
+	padding: 2em;
+}
+
+	/*------------------------------------------------------------
+									FOOTER
+	------------------------------------------------------------*/
+
+	.sj-footer {
+		font-size: 1.5em;
+	}
+
+}
+
+@media screen and (min-width: 992px) {
+	nav li {
+		min-width: 110px;
+		margin-right: 0.5em;
+	}
+}
