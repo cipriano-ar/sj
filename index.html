@@ -1,58 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<title>Street Jackets</title>
 
 	<!-- For proper rendering across all devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
+	<!-- Font Awesome & Bootstrap -->
+	<link rel="stylesheet" href="libs/font-awesome/font-awesome-4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-3.3.1/css/bootstrap.min.css">
+
+	<!-- Responsive Nav Bar -->
+	<link rel="stylesheet" href="css/responsive-nav.min.css">
+
+	<!-- Responsive Touch Slider -->
+	<link rel="stylesheet" href="css/resp-touch-slider.min.css">
+
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="css/styles.min.css">
 	
 </head>
-<body>
+<body id="top">
 
-	<div id="top" class="container">
+	<div class="container">
 
-		<!--********** HEADER **********-->
+		<!-- ########## HEADER ########## -->
 
 		<header class="row">
-		<div class="col-sm-3">
+
+		<!-- SECONDARY NAV BAR ("Back to Top") added on scroll using jquery -->
+		<nav class="sec-nav-bar">
+			<!-- "Back to Top" text -->
+			<a class="scroll" href="#top">
+				<div class="sml-cont">Back to Top</div>
+			</a>
+			<!-- Logo -->
 			<div class="img-container">
-				<img src="images/logo-transparent.png" alt="logo">
+				<a class="scroll" href="#top">
+					<img src="media/images/logo-transparent.png" alt="logo">	
+				</a>
+			</div>
+			<!-- Facebook icon/link -->
+			<a  href="https://www.facebook.com/streetjackets" target="_blank">
+				<i class="fa fa-facebook fa-2x"></i>
+			</a>
+		</nav>
+
+		<!-- HEADER - MAIN NAVIGATION BAR -->
+
+		<!-- LOGO -->
+		<div class="col-sm-3 logo">
+			<div class="img-container">
+				<a class="scroll" href="#top">
+					<img src="media/images/logo-transparent.png" alt="logo">
+				</a>
 			</div>
 		</div>
-		<div class="col-sm-6">
-			<nav>
-				<ul>
-					<li><a href="#schedule">Schedule</a></li>
-					<li><a href="#food-menu">Menu</a></li>
-					<li><a href="#about-us">About Us</a></li>
+
+		<!-- NAV BAR -->
+		<div class="col-sm-7">
+
+			<nav class="nav-collapse">
+				<ul id="menu">
+					<li><a class="scroll" href="#schedule">Schedule</a></li>
+					<li><a class="scroll" href="#food-menu">Menu</a></li>
+					<li><a class="scroll" href="#about-us">About Us</a></li>
+					<li><a class="scroll" href="#contact-us">Contact Us</a></li>
 				</ul>
 			</nav>
+
 		</div>
-		<div class="col-sm-3">
+
+		<!-- SOCIAL BAR -->
+		<div class="col-sm-2 social">
 			<p>
 				<span class="text-yellow">Follow Us!</span><br>
 				<a  href="https://www.facebook.com/streetjackets" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-				<a  href="http://twitter.com" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
 			</p>
 		</div>
 		</header>
 
-		<!--********** MAIN CONTENT **********-->
+		<!-- ########## MAIN CONTENT ########## -->
 
 		<main class="row">
+			
+			<!-- RESPONSIVE SLIDESHOW -->
+
+			<div class="slide-container">
+				<div class="diy-slideshow">
+					<figure class="show">
+						<img src="media/images/slideshow/chimney.jpg" alt="" />
+						<figcaption>Smoking it</figcaption>
+					</figure>
+					<figure>
+						<img src="media/images/slideshow/pork-top.jpg" alt="" />
+						<figcaption>Slow roasted pork</figcaption>
+					</figure>
+					<figure>
+						<img src="media/images/slideshow/raw-pork.jpg" alt="" />
+						<figcaption>Ready to roast</figcaption>
+					</figure>
+					<span class="prev">«</span>
+					<span class="next">»</span>
+				</div>
+			</div>
+			
 		<div class="col-xs-12">
 
 			<!-- TRUCK SCHEDULE -->
 
-			<section id="schedule" class="row road-texture">
+			<div id="schedule"></div>
+			<section class="row schedule oven-draws-texture">
 			<div class="col-xs-12 text-center">
 				<h2 class="stroke-yellow">Schedule</h2>
-				<p class="to-top"></p>
 				<div class="data-row">
 					<h3 class="title">Thu 1 Jan 2015</h3>
 					<h4 class="sub-title">Whanganui River Market</h4>
@@ -71,16 +133,15 @@
 					<p class="description-s">9am to 1pm</p>
 					<p class="description-s">Cobham Court carpark, Porirua City</p>
 				</div>
-				<p class="to-top"><a href="#top">back to top</a></p>
 			</div>
 			</section>
 
 			<!-- FOOD MENU -->
-
-			<section id="food-menu" class="row road-texture">
+			
+			<div id="food-menu"></div>
+			<section class="row food-menu road-texture">
 			<div class="col-xs-12 text-center">
 				<h2 class="stroke-yellow">Menu</h2>
-				<p class="to-top"><a href="#top">back to top</a></p>
 				<div class="data-row">
 					<h3 class="menu-item">Chicken Burger</h3>
 					<div class="center">
@@ -109,41 +170,79 @@
 					</div>
 					<p class="description-s price">$8.50</p>
 				</div>
-				<p class="to-top"><a href="#top">back to top</a></p>
 			</div>
 			</section>
 
-			<section id="about-us" class="row road-texture">
-			<div class="col-xs-12 text-center">
-				<h2 class="stroke-yellow">About Us</h2>
-				<p class="to-top"><a href="#top">back to top</a></p>
+			<!-- ABOUT US -->
+
+			<div id="about-us"></div>
+			<section class="row about-us hot-coal-texture">
+			<div class="col-xs-12">
+				<h2 class="stroke-yellow text-center">About Us</h2>
 				<div class="data-row">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, harum eius aperiam recusandae deserunt nemo sed aut fugit quam officiis enim quaerat suscipit eveniet possimus deleniti maxime perspiciatis quidem labore?</p>
-					<p>Eveniet ipsa, neque molestias expedita placeat veritatis, nulla porro numquam eos vero maxime, repellat magnam dolorem voluptatum, enim est iste consequatur perspiciatis autem. Eaque ea, autem eos consequuntur repellat natus?</p>
-					<p>Omnis, molestias corporis doloribus eos minus totam numquam sequi, error natus autem tempora fuga. Eaque vel dolores nobis culpa at in dolor velit commodi, accusantium quaerat, reprehenderit totam unde iure!</p>
-					<p>Quos excepturi tempora saepe placeat obcaecati. Eveniet unde laudantium omnis dolor, sit obcaecati eaque veniam numquam labore voluptatum. Dolorum voluptatibus voluptas laboriosam doloremque sapiente ex illo aperiam iste, omnis natus?</p>
+					<p>Our passion for american bbq all started with a tiny smoker and a bunch of hungry mates in the back yard.</p>
+					<p>After many years working with smoke and fire we’re ready to show you what American BBQ is all about. Match that with exceptional Wanganui grown potatoes and all our own sauces and we can guarantee your taste buds are going to freak out!</p>
+					<p>We’re based in Wanganui, or at a festival or event (or paddock) near you. But if you’re the jealous type you can have us all to yourselves for your next event, birthday, work-do, or party.</p>
+					<p>Follow us on <a href="https://www.facebook.com/streetjackets" target="_blank">facebook</a> to catch up with our Street Food Shennanigans</p>
+					<p>See you on the road!!</p>
 				</div>
-				<p class="to-top"><a href="#top">back to top</a></p>
+			</div>
+			</section>
+
+			<!-- CONTACT US -->
+
+			<div id="contact-us"></div>
+			<section class="row contact-us road-texture">
+			<div class="col-xs-12 text-center">
+				<h2 class="stroke-yellow">Contact Us</h2>
+				<div class="data-row">
+					<p>
+				  	<i class="fa fa-envelope main-color"></i>&nbsp;&nbsp;sandor@streetjackets.co.nz
+				  </p>
+				  <p>
+				  	<i class="fa fa-phone main-color"></i>&nbsp;&nbsp;022 196 8550
+				  </p>
+				  <p>
+				  	<i class="fa fa-home main-color"></i>&nbsp;&nbsp;6/35 Harrison Street, Wanganui, New Zealand
+				  </p>
+				  <p>
+				  	<i class="fa fa-facebook main-color"></i>&nbsp;&nbsp;facebook.com/streetjackets
+				  </p>
+				</div>
 			</div>
 			</section>
 
 		</div>
 		</main>
 
-		<!--********** FOOOTER **********-->
+		<!-- ########## FOOTER ########## -->
 
 		<footer class="row">
 		<div class="col-xs-8 col-xs-offset-2 text-center">
 			<p class="sj-footer"><span class="sj stroke-yellow">STREET JACKETS</span><br>Baked Potatoes<br><span class="text-green">AWESOME !</span>
 			</p>
 			<p class="description-s">
-				<img class="img-container" src="images/potato-phone.png" alt="potato on the phone">
-				<br><strong>021 1791584</strong>
+				<img class="img-container" src="media/images/potato-phone.png" alt="potato on the phone">
+				<br><strong>022 196 8550</strong>
 				<!-- <i class="fa fa-phone fa-2x"></i> Alo? -->
 			</p>
 		</div>
 		</footer>
 	</div>
 	
+
+<!-- LIBS -->
+<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+<script src="libs/jquery/jquery.touchSwipe.min.js"></script>
+
+<!-- Responsive Nav Bar -->
+<script src="js/responsive-nav.min.js"></script>
+
+<!-- Responsive Touch Slider -->
+<script src="js/resp-touch-slider.min.js"></script>
+
+<!-- MY JS -->
+<script src="js/main.min.js"></script>
+
 </body>
 </html>
